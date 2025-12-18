@@ -3,16 +3,16 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "cliprog"
+name = "pyvaliddict-rj"
 version = "1.0.0"
-description = "Lightweight CLI progress bars"
+description = "Dictionary schema validation"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.8"
 authors = [
     { name = "RedJohnx", email = "redjohnx@example.com" }
 ]
-keywords = ["progress", "progressbar", "cli", "terminal", "spinner"]
+keywords = ["validation", "schema", "dictionary", "dict", "validator"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
@@ -23,9 +23,12 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Environment :: Console",
 ]
 
 [project.urls]
 Homepage = "https://github.com/RedJohnx/pypi_warehouse"
-Repository = "https://github.com/RedJohnx/pypi_warehouse/tree/main/packages/cliprog"
+Repository = "https://github.com/RedJohnx/pypi_warehouse/tree/main/packages/validdict"
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/validdict"]

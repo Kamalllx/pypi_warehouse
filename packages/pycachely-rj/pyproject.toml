@@ -3,16 +3,16 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "logfmt"
+name = "pycachely-rj"
 version = "1.0.0"
-description = "Beautiful, structured console logging"
+description = "Simple in-memory caching with TTL support"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.8"
 authors = [
     { name = "RedJohnx", email = "redjohnx@example.com" }
 ]
-keywords = ["logging", "logger", "console", "structured", "colored"]
+keywords = ["cache", "caching", "memoize", "ttl", "decorator"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
@@ -27,4 +27,8 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://github.com/RedJohnx/pypi_warehouse"
-Repository = "https://github.com/RedJohnx/pypi_warehouse/tree/main/packages/logfmt"
+Repository = "https://github.com/RedJohnx/pypi_warehouse/tree/main/packages/cachely"
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cachely"]
