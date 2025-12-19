@@ -81,7 +81,16 @@ class VideoGenerator:
     def _extract_example_array(self, question: Question) -> str:
         """Try to extract an example array from the question"""
         # Common patterns for arrays in problem examples
-        text = question.description + " " + " ".join(question.examples or [])
+        # Handle examples that might be dicts or strings
+        examples_text = ""
+        if question.examples:
+            for ex in question.examples:
+                if isinstance(ex, dict):
+                    examples_text += " " + str(ex.get("input", "")) + " " + str(ex.get("output", ""))
+                elif isinstance(ex, str):
+                    examples_text += " " + ex
+        
+        text = question.description + " " + examples_text
         
         # Look for patterns like [1, 2, 3] or nums = [1, 2, 3]
         patterns = [

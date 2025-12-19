@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.0.7] - 2024-12-19
+
+### 🐛 Bug Fix
+- **Fixed video generation error**: `sequence item 0: expected str instance, dict found`
+- Fixed `_extract_example_array()` to properly handle examples that are dictionaries
+- Examples from scraped questions now correctly parsed for array extraction
+
+---
+
 ## [1.0.6] - 2024-12-19
 
 ### 🐛 Critical Bug Fix
